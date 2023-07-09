@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Header from './Header';
+import Shop from './Shop';
+import Container from './Container';
+import Footer from './Footer';
+import { useState } from 'react';
 
 function App() {
+  //use state for counting cart
+  const [CountCart,setCount]=useState([]);
+  //function to add a count
+ const addCount =(item)=>{
+  setCount([...CountCart,item])
+ }
+ //function to remove a count
+ const removeCount =(item)=>{
+  setCount(CountCart.filter(CountItem=>CountItem!==item))
+ }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Shop Count={CountCart.length}/>
+        <Header />
+        <Container
+        //passing the function as a property to  the shopping cart
+        addCount={addCount}
+        removeCount={removeCount}
+        />
+        <Footer /> 
     </div>
   );
 }
 
 export default App;
+ 
