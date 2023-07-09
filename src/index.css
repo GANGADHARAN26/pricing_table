@@ -1,12 +1,14 @@
 .card{
     margin: 45px;
+    margin-bottom: 40px;
     transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
-  margin-top:60px;
+  margin-top:90px;
   justify-content: space-around;
+  margin-right: 45px;
 }
 
 #bageSale{
