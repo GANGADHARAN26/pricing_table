@@ -52,7 +52,7 @@ const ShoppingCart = ({id, title, image, price, mutedPrice, rating, badge ,addCo
         </div>
         <div className="card-footer">
           <div className="text-center">
-            <a className="btn btn-outline-dark " onClick={()=>handleCart()}>
+            <a className="btn btn-outline-dark " href onClick={()=>handleCart()}>
               {addToCart? <span>Remove cart</span> : <span>Add to cart</span>}
             </a>
           </div>
